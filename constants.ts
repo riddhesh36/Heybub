@@ -4,7 +4,7 @@ import { Chapter } from './types';
 // The date the user needs to input to unlock the experience.
 // Format: DD MM YYYY
 export const SPECIAL_DATE = {
-  day: '17',
+  day: '18',
   month: '07',
   year: '2025' // Example year
 };
