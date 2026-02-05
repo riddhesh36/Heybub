@@ -19,7 +19,6 @@ export const CHAPTER_ORDER = [
   Chapter.GALLERY
 ];
 
-// Direct CDN link extracted from Jumpshare 
-// NOTE: Jumpshare links are temporary and will expire (404).
-// RECOMMENDATION: Upload your .mp3 file to the 'public/' folder and change this to '/your-song.mp3' for permanent reliability.
-export const AUDIO_SOURCE = 'https://cdn.jumpshare.com/preview/Lh5fwV8iKPLGzjlBXz7q3kYx6wVQ9Iev1aogTTUg6NQCeGpMViVEK2Ck222qpNTu-mEavFg-a06lkdABlo2RiOrkkCeObxa1-7t0o-uj5TjU7f5mYuaBVg-UMXXksZwYa52JONih4p55VytZ7qJ5n26yjbN-I2pg_cnoHs_AmgI.mp3'; 
+// Direct CDN link extracted from Jumpshare page
+// NOTE: These links are temporary. For a permanent fix, host the file in the public/ folder.
+export const AUDIO_SOURCE = 'https://cdn.jumpshare.com/preview/kgxUW3tYT1EjUsP3dRSliiOpsiJi2n4iu4FxU-AVLeCZ3SXa-vhFRFpW7vS8Uv1fFUJgrhyeJ03L3xIJZIkL2OrkkCeObxa1-7t0o-uj5TjU7f5mYuaBVg-UMXXksZwYUwpBWeRwQ3DsleYNGkRlmG6yjbN-I2pg_cnoHs_AmgI.mp3'; 
