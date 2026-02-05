@@ -1,0 +1,14 @@
+/* Main application styles */
+:root {
+  --void: #0a0a0a;
+  --paper: #f4f1ea;
+  --ink: #1a1a1a;
+  --accent: #c2410c;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--paper);
+  color: var(--ink);
+}
