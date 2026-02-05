@@ -31,10 +31,16 @@ const App: React.FC = () => {
     if (!audioStarted && audioRef.current) {
       setAudioStarted(true);
       audioRef.current.volume = 0;
-      audioRef.current.play().catch(e => console.error("Audio play failed", e));
-
-      // Fade in
-      gsap.to(audioRef.current, { volume: 0.4, duration: 5 });
+      audioRef.current.play()
+        .then(() => {
+          console.log("Audio playback started successfully");
+          // Fade in
+          gsap.to(audioRef.current, { volume: 0.4, duration: 5 });
+        })
+        .catch(e => {
+          console.error("Audio playback failed automatically, might need user gesture or source is invalid:", e);
+          setAudioStarted(false); // Reset to allow retry
+        });
     }
   };
 
@@ -70,7 +76,13 @@ const App: React.FC = () => {
     <div className="relative w-screen h-screen overflow-hidden selection:bg-accent selection:text-white">
       <CustomCursor />
 
-      <audio ref={audioRef} loop src={AUDIO_SOURCE} preload="auto" />
+      <audio
+        ref={audioRef}
+        loop
+        src={AUDIO_SOURCE}
+        preload="auto"
+        onError={(e) => console.error("Audio source failed to load. Check if the link in constants.ts is still valid.", e)}
+      />
 
       {/* Noise Overlay for texture */}
       <div className="noise-overlay" />
