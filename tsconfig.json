@@ -25,5 +25,9 @@
     },
     "allowImportingTsExtensions": true,
     "noEmit": true
-  }
+  },
+  "exclude": [
+    "optimize_images.js",
+    "node_modules"
+  ]
 }
